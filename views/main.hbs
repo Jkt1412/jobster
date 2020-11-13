@@ -1,0 +1,28 @@
+<h3> Find your perfect match today!! </h3>
+<h4> Welcome {{name}}! </h4>
+<h5> Here are some people that are available for work </h5>
+{{#if list_of_matches}}
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Contact</th>
+                <th>Skill</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each list_of_matches}}
+                <tr>
+                    <td>{{fname}}</td>
+                    <td>{{email}}</td>
+                    <td><span class="dash-status">{{skills}}</span></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+{{else}}
+    <p> You do not have any matches </p>
+
+{{/if}}
